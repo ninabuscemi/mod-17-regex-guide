@@ -26,54 +26,41 @@ Matching an HTML Tag - `/^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/`
 
 ### Anchors
 
-`^` used at the beginning to match the start of the string.
+Anchors are crucial in defining where a pattern should match within a string. The `^` anchor asserts the position at the beginning of the string, ensuring the pattern starts matching from the very start.
 
-`$` used at the end to match the end of the string.
+Also, the `$` anchor asserts the position at the end of the string, ensuring the pattern matches until the very end of the input string.
 
 ### Quantifiers
 
-`+` after `[a-z]` to specify one or more lowercase alphabetic characters.
-
-`*` after `([^<]+)` to specify zero or more occurrences of any character except `<`.
+Quantifiers control the number of occurrences a particular element in the pattern can match. The `+` quantifier specifies that the preceding element (in this case, `[a-z]`) should match one or more times. Similarly, the `*` quantifier after `([^<]+)` specifies that zero or more occurrences of any character except `<` should be matched.
 
 ### OR Operator
 
-The OR operator `|` is used to provide alternative matching options:
-
-Either `(>.*)<\/\1>` to match a complete tag with content.
-
-Or `\s+\/>` to match a self-closing tag.
+The OR operator `|` provides flexibility in matching patterns by allowing alternative options. In this regular expression, it provides two options for matching tags: `(>.*)<\/\1>` to match a complete tag with content, or `\s+\/>` to match a self-closing tag.
 
 ### Character Classes
 
-`[a-z]` to match any lowercase alphabetic characters.
+Character classes, such as `[a-z]`, specify a set of characters that the pattern can match. In this case, `[a-z]` matches any lowercase alphabetic character, allowing flexibility in matching tag names or other lowercase text.
 
 ### Grouping and Capturing
 
-Used with parentheses:
-
-`([a-z]+)` captures one or more lowercase alphabetic characters.
-`([^<]+)*` captures zero or more occurences of any character except `<`.
+Grouping and capturing with parentheses `()` allow specific parts of the matched text to be captured for later reference or extraction. For instance, `([a-z]+)` captures one or more lowercase alphabetic characters, while `([^<]+)*` captures zero or more occurrences of any character except `<`.
 
 ### Bracket Expressions
 
-In other words, character classes:
-
-`[a-z]` matches any lowercase alphabetic character.
+Bracket expressions, or character classes, specify a set of characters that the pattern can match. In this regular expression, `[a-z]` matches any lowercase alphabetic character, providing specificity in matching certain types of characters within the string.
 
 ### Greedy and Lazy Match
 
-Greedy matching is exhibited by default:
-
-`(.*)` matches zero or more of any character greedily.
+Greedy matching, exhibited by default, attempts to match as much text as possible while still allowing the overall pattern to match. For example, `(.*)` matches zero or more of any character greedily, consuming as much text as possible until it reaches the end of the string or encounters a condition that causes it to backtrack.
 
 ### Boundaries
 
-Boundaries are used implicitly with anchors, ensuring the expression matches the entire string.
+Boundaries, in conjunction with anchors, ensure that the pattern matches specific positions within the string. Anchors like `^` and `$` implicitly define boundaries by indicating the start and end of the string, respectively. This ensures that the expression matches the entire string, rather than just a portion of it.
 
 ### Back-references
 
-`<\/\1>` ensures that the closing tag matches the opening tag captured in the first group.
+Back-references, indicated by `\1`, allow referencing previously captured groups within the regular expression. In this case, `<\/\1>` ensures that the closing tag matches the opening tag captured in the first group `(([a-z]+))`, maintaining consistency in HTML/XML-like tag structures.
 
 ## Author
 
