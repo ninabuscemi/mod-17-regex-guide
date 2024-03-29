@@ -1,4 +1,4 @@
-# Module 17 Challenge- Regular Expressions
+# Regular Expressions Tutorial
 
 A regex (regular expression) is a sequence of characters that defines a search pattern in text.
 
