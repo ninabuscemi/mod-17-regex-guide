@@ -76,3 +76,7 @@ Boundaries are used implicitly with anchors, ensuring the expression matches the
 `<\/\1>` ensures that the closing tag matches the opening tag captured in the first group.
 
 ## Author
+
+If you have any questions regarding the project, please, feel free to contact me:
+
+GitHub: [ninabuscemi](https://github.com/ninabuscemi)
