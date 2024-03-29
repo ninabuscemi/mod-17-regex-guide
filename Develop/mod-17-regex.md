@@ -1,10 +1,14 @@
-# Title (replace with your title)
+# Module 17 Challenge- Regular Expressions
 
-Introductory paragraph (replace this with your text)
+A regex (regular expression) is a sequence of characters that defines a search pattern in text.
+
+You can use `ctrl + f` to bring up your search bar in your VS code.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+I will use the following regular HTML Tag expression to define the different parts of it that make it a regex:
+
+Matching an HTML Tag - `/^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/`
 
 ## Table of Contents
 
