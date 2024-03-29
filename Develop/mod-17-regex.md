@@ -76,5 +76,3 @@ Boundaries are used implicitly with anchors, ensuring the expression matches the
 `<\/\1>` ensures that the closing tag matches the opening tag captured in the first group.
 
 ## Author
-
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
